@@ -13,10 +13,11 @@ class Course(models.Model):
 class Step(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    content = models.TextField(blank=True, default='') # set to non-null, if no input have empty string
     order = models.IntegerField(default=0) # Controls the order of steps, could have them autoincrement instead etc
     course = models.ForeignKey(Course) # Points to record in Course
 
-    # cCntrols how the model does x, in this case ordering
+    # Controls how the model does x, in this case ordering
     class Meta:
         ordering = ['order',]
 
