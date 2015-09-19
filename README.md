@@ -1,3 +1,3 @@
-# learning_site
+# Learning Site
 
-Simple django courses app
+Simple django python courses app, uses SQLite
